@@ -1,7 +1,16 @@
+// Representa a avaliação de um usuário sobre um item de mídia.
 public class Review {
+
+    // Usuário que fez a review
     private User author;
+
+    // Item avaliado
     private MediaItem item;
+
+    // Nota dada pelo usuário
     private int rating;
+
+    // Comentário escrito
     private String comment;
 
     public Review(User author, MediaItem item, int rating, String comment) {
