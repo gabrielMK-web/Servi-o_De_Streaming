@@ -1,9 +1,20 @@
+// Classe abstrata que serve como base para qualquer tipo de mídia.
+// Ela obriga subclasses a implementarem play().
 public abstract class MediaItem {
+
+    // Identificador do item
     private int id;
+
+    // Título da mídia
     private String title;
-    private int duration; // minutos
+
+    // Duração em minutos
+    private int duration;
+
+    // Gênero da mídia (ex: "Ação", "Drama")
     private String genre;
 
+    // Construtor inicializa os campos obrigatórios
     public MediaItem(int id, String title, int duration, String genre) {
         this.id = id;
         this.title = title;
@@ -11,7 +22,7 @@ public abstract class MediaItem {
         this.genre = genre;
     }
 
-    // Encapsulamento
+    // Getters e setters básicos
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -24,6 +35,6 @@ public abstract class MediaItem {
     public String getGenre() { return genre; }
     public void setGenre(String genre) { this.genre = genre; }
 
-    // Polimorfismo
+    // Método abstrato obrigando subclasses a definir a ação de tocar
     public abstract void play();
 }
